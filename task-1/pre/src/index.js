@@ -1,4 +1,4 @@
-import data from "./cats_and_dogs.json" assert { type: "json" };
+import { data } from "./cats_and_dogs.js";
 
 //  Решение
 

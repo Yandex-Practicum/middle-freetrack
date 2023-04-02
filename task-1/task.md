@@ -4,7 +4,7 @@
 
 ```jsx
 {
-	filename: "0.jpg",
+	filename: "0.png",
 	width: 262,
 	height: 350,
 	likes: 91
