@@ -1,34 +1,34 @@
-import data from "./cats_and_dogs.json" assert { type: "json" };
+import { data } from "./cats_and_dogs.js";
 
-// Решение
 const catsAndDogs = Object.entries(data)
-  .reduce((acc, [id, value]) => [...acc, { ...value, id }], [])
-  .map((i) => ({ ...i, filename: i.filename.replace("./", "images/") }))
-  .sort((a1, a2) => (a1.width * a1.height > a2.height * a2.height ? -1 : 1));
+    .reduce((acc, [id, value]) => [...acc, { ...value, id }], [])
+    .sort((a1, a2) => (a1.likes > a2.likes ? -1 : 1));
 
 const result = {
-  top: catsAndDogs.slice(0, 5),
-  rest: catsAndDogs.slice(5),
+  top: catsAndDogs.slice(0, 5).sort((a1, a2) => (a1.width * a1.height > a2.height * a2.width ? -1 : 1)),
+  rest: catsAndDogs.slice(5).sort((a1, a2) => (a1.width * a1.height > a2.height * a2.width ? -1 : 1)),
 };
 
-const animalWrapper = (entity) => `<li>
-<button class="imageWrapper" aria-expanded="false">
-  <img src="${entity.filename}" alt="" />
-</button>
-</li>`;
+// Решение
+const topContainer = document.querySelector('.animals-top');
+const restContainer = document.querySelector('.animals-rest');
+const createAnimalItem = (entity) => {
+    const li = document.createElement('li');
+    const img = document.createElement('img');
+    img.src = entity.filename;
+    li.appendChild(img);
 
-const createTemplate = (result) => `
-<section>
-<h2>Популярные животные</h2>
-<ul class="animals top">${result.top.map(animalWrapper).join("\n")}</ul>
-</section>
-<section>
-<h2>Остальные</h2>
-<ul class="animals rest">${result.rest.map(animalWrapper).join("\n")}</ul>
-</section>
-`;
+    return li;
+};
 
-document.body.innerHTML = createTemplate(result);
+const fillContainer = (arr, container) => {
+  arr.forEach(item => {
+      container.appendChild(createAnimalItem(item));
+  });
+};
+
+fillContainer(result.top, topContainer);
+fillContainer(result.rest, restContainer);
 
 // Проверки
 const images = [...document.querySelectorAll("img")]

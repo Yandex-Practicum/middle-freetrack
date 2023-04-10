@@ -3,41 +3,27 @@ h2 {
   font-size: 56px;
 }
 
-.animals + .animals {
-  margin-top: 20px;
-}
-
-.imageWrapper {
-  border: none;
-  display: block;
-  background: none;
-  overflow: hidden;
-  padding: 0;
-}
-
 /* Решение */
 
 li {
-  aspect-ratio: 1;
   padding: 0;
   margin: 0;
 }
 
-.imageWrapper {
+li img {
   width: 100%;
   height: 100%;
-}
-
-.imageWrapper img {
-  width: 100%;
-  height: 100%;
+  /* Решение  для изображений */
+  aspect-ratio: 1;
   object-fit: cover;
 }
 
 /* Решение */
-.animals {
+.animals-top,
+.animals-rest {
   list-style-type: none;
   padding: 0;
+  /* Решение  для списков */
   display: grid;
   gap: 24px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
