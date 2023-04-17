@@ -4,7 +4,7 @@
 
 Вот требования, которым должна соответствовать галерея:
 
-1. Используйте grid.
+1. Используйте Grid Layout.
 2. Все картинки вставлены тегом `<img>`.
 3. Все картинки квадратные.
 4. Расстояние между двумя соседними картинками по горизонтали и по вертикали одинаковое и составляет `24px`.
@@ -19,4 +19,4 @@
 
 ## Текст успешного прохождения
 
-Отлично! Для работы с изображениями в CSS можно использовать свойство `[object-fit]`(https://developer.mozilla.org/ru/docs/Web/CSS/object-fit){target="_blank"}, а для сеток — [grids](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids){target="_blank"}.
+Отлично! Для работы с изображениями в CSS можно использовать свойство `[object-fit]`(https://developer.mozilla.org/ru/docs/Web/CSS/object-fit){target="_blank"}, а для сеток — [Grid Layout](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids){target="_blank"}.
