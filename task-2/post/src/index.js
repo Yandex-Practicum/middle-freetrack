@@ -4,7 +4,7 @@ import { catAndDogFetcher, magicalCatRecognizer } from "./lib.js";
 
 const getCats = async () => {
   const allAnimals = await catAndDogFetcher.fetchAll();
-  allAnimals.sort((a, b) => b.likes - a.likes);
+
   const topRatedCats = [];
   let i = 0;
   while (topRatedCats.length < 3) {

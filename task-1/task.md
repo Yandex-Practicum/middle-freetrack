@@ -37,5 +37,3 @@ const result = { top: [...], rest: [...]}
 ## Текст успешного прохождения
 
 Отлично! У массивов много удобных методов для работы с данными: [`sort`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort){target="_blank"}, [`slice`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice){target="_blank"},  `reduce` и другие. С помощью них можно получить данные и привести их к нужному виду.
-
-Посмотрите, как эту задачу [решил автор](https://playcode.io/1210783){target="_blank"}.
